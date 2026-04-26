@@ -1,5 +1,7 @@
 class ApiClient {
-  constructor(baseUrl = "https://t-news-backend-parser.up.railway.app/api") {
+  constructor(
+    baseUrl = "https://t-news-backend-production.up.railway.app/api",
+  ) {
     this.baseUrl = baseUrl;
   }
 
