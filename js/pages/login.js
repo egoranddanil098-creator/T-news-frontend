@@ -26,7 +26,7 @@ class LoginPage {
 
   checkAuthStatus() {
     if (authService.isAuthenticated()) {
-      window.location.href = "../../../frontend/html/main.html";
+      window.location.href = "/html/main.html";
     }
   }
 
@@ -43,7 +43,7 @@ class LoginPage {
       this.loginBtn.disabled = true;
       await authService.login(username, password);
 
-      window.location.href = "../../../frontend/html/main.html";
+      window.location.href = "/html/main.html";
     } catch (error) {
       this.showError("Неверный логин или пароль");
       console.error("Login failed:", error);
@@ -54,7 +54,7 @@ class LoginPage {
   }
 
   handleRegister() {
-    window.location.href = "../../../frontend/html/register.html";
+    window.location.href = "/html/register.html";
   }
 
   showError(message) {

@@ -11,7 +11,7 @@ class CommentsPage {
   constructor() {
     this.postId = this.getPostIdFromURL();
     if (!this.postId) {
-      window.location.href = "../../../frontend/html/main.html";
+      window.location.href = "/html/main.html";
       return;
     }
 

@@ -28,12 +28,12 @@ class RegisterPage {
 
   checkAuthStatus() {
     if (registerService.isAuthenticated()) {
-      window.location.href = "../../../frontend/html/main.html";
+      window.location.href = "/html/main.html";
     }
   }
 
   handleLogin() {
-    window.location.href = "../../../frontend/html/login.html";
+    window.location.href = "/html/login.html";
   }
 
   async handleRegister() {
@@ -50,7 +50,7 @@ class RegisterPage {
 
       await registerService.register(username, firstPassword);
 
-      window.location.href = "../../../frontend/html/main.html";
+      window.location.href = "/html/main.html";
     } catch (error) {
       this.showError("Неверный логин или пароль");
       console.error("Register failed:", error);

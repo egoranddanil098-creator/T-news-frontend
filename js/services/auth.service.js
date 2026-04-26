@@ -21,7 +21,7 @@ class AuthService {
 
   logout() {
     localStorage.removeItem("userId");
-    window.location.href = "../../../frontend/html/main.html";
+    window.location.href = "/html/main.html";
   }
 
   isAuthenticated() {
