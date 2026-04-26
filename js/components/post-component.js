@@ -2,6 +2,9 @@ import { postsService } from "../services/posts.service.js";
 import { userService } from "../services/user.service.js";
 import { feedService } from "../services/feed.service.js";
 
+const PUBLIC_ASSET_BASE_URL =
+  "https://t-news-backend-production.up.railway.app/public/";
+
 class PostComponent {
   constructor(options = {}) {
     this.currentUserId = userService.getUserId();
@@ -43,10 +46,14 @@ class PostComponent {
     postElement.dataset.postId = post.id;
 
     const canDeleteThisPost = this.canDelete;
+    const avatarSrc =
+      post.avatar && post.avatar.startsWith("http")
+        ? post.avatar
+        : `${PUBLIC_ASSET_BASE_URL}${post.avatar || "default.png"}`;
 
     postElement.innerHTML = `
       <div class="author">
-        <a  href="profile.html?userId=${post.userId}"></q><img class="logo-author" src="http://localhost:3000/public/${post.avatar || "default.png"}" alt="avatar ${post.username}"></a>
+        <a  href="profile.html?userId=${post.userId}"></q><img class="logo-author" src="${avatarSrc}" alt="avatar ${post.username}"></a>
         <p class="authon-name">${post.username}</p>
       </div>
       <div class="post-content">

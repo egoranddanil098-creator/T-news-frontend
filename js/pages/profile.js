@@ -4,6 +4,9 @@ import { authService } from "../services/auth.service.js";
 import SearchComponent from "../components/search-component.js";
 import PostComponent from "../components/post-component.js";
 
+const PUBLIC_ASSET_BASE_URL =
+  "https://t-news-backend-production.up.railway.app/public/";
+
 class ProfilePage {
   constructor() {
     this.initElements();
@@ -392,7 +395,10 @@ class ProfilePage {
 
   async setUserData(userId) {
     const data = await userService.getUserData(userId);
-    this.profileImage.src = `http://localhost:3000/public/${data.avatar || "default.png"}`;
+    this.profileImage.src =
+      data.avatar && data.avatar.startsWith("http")
+        ? data.avatar
+        : `${PUBLIC_ASSET_BASE_URL}${data.avatar || "default.png"}`;
     this.userName.textContent = data.username;
     this.userDescription.textContent =
       data.bio ||

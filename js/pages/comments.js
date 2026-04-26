@@ -4,6 +4,9 @@ import { userService } from "../services/user.service.js";
 import { authService } from "../services/auth.service.js";
 import SearchComponent from "../components/search-component.js";
 
+const PUBLIC_ASSET_BASE_URL =
+  "https://t-news-backend-production.up.railway.app/public/";
+
 class CommentsPage {
   constructor() {
     this.postId = this.getPostIdFromURL();
@@ -111,7 +114,10 @@ class CommentsPage {
   renderPost(post) {
     if (!this.postContainer) return;
 
-    const avatarPath = `http://localhost:3000/public/${post.avatar}`;
+    const avatarPath =
+      post.avatar && post.avatar.startsWith("http")
+        ? post.avatar
+        : `${PUBLIC_ASSET_BASE_URL}${post.avatar || "default.png"}`;
 
     const postElement = document.createElement("article");
     postElement.className = "card";
@@ -171,7 +177,10 @@ class CommentsPage {
     this.commentsList.innerHTML = "";
 
     comments.forEach((comment) => {
-      const avatarPath = `http://localhost:3000/public/${comment.user.avatar}`;
+      const avatarPath =
+        comment.user.avatar && comment.user.avatar.startsWith("http")
+          ? comment.user.avatar
+          : `${PUBLIC_ASSET_BASE_URL}${comment.user.avatar || "default.png"}`;
 
       const commentElement = document.createElement("div");
       commentElement.className = "comment";

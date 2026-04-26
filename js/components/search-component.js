@@ -1,6 +1,9 @@
 import { searchService } from "../services/search.service.js";
 import PostComponent from "./post-component.js";
 
+const PUBLIC_ASSET_BASE_URL =
+  "https://t-news-backend-production.up.railway.app/public/";
+
 class SearchComponent {
   constructor() {
     this.searchInput = document.querySelector(".search-input");
@@ -160,16 +163,23 @@ class SearchComponent {
 
     usersContainer.innerHTML = users
       .map(
-        (user) => `
+        (user) => {
+          const avatarSrc =
+            user.avatar && user.avatar.startsWith("http")
+              ? user.avatar
+              : `${PUBLIC_ASSET_BASE_URL}${user.avatar || "default.png"}`;
+
+          return `
         <div class="searched-user author">
           <a class="logo-author" href="profile.html?userId=${user.id}">
               <img class="img-author"
-              src="http://localhost:3000/public/${user.avatar || "default.png"}" 
+              src="${avatarSrc}" 
               alt="avatar ${user.username}">
           </a>
           <p class="authon-name">${user.username}</p>
         </div>
-    `,
+    `;
+        },
       )
       .join("");
   }
