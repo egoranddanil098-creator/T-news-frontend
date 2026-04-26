@@ -1,0 +1,113 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fc;
+}
+
+.header {
+  width: 100%;
+  background-color: #f6f7f8;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  padding: 14px 0;
+  margin: 0 auto;
+  max-width: 824px;
+  border-bottom: 1px solid #dddada;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo-icon {
+  width: 29px;
+  height: 29px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  margin: 160px auto;
+  max-width: 414px;
+  padding: 20px 24px 24px 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+
+.input-login,
+.input-password,
+.input-repeat-password {
+  background-color: #244a7f0f;
+  width: 366px;
+  height: 56px;
+  border-radius: 12px;
+
+  padding: 16px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.btn-register,
+.btn-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  line-height: 20px;
+  max-width: 177px;
+  border-radius: 8px;
+}
+
+.btn-register {
+  color: #126df7;
+  padding: 12px 16px;
+  background-color: #244a7f0f;
+}
+
+.btn-login {
+  color: #333333;
+  background-color: #ffdd2d;
+  padding: 12px 67px;
+}
+
+.gray {
+  color: #126df7;
+  background-color: #244a7f0f;
+  padding: 12px 67px;
+}
+
+.yellow {
+  color: #333333;
+  padding: 12px 16px;
+  background-color: #ffdd2d;
+}

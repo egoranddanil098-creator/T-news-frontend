@@ -1,0 +1,200 @@
+@import url("reset.css");
+@import url("header.css");
+@import url("posts.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fc;
+}
+
+.content {
+  max-width: 824px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-profile {
+  margin-top: 44px;
+  display: flex;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  column-gap: 21px;
+}
+
+.name {
+  max-width: 517px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 40px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.user-block {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.edit-name {
+  width: 24px;
+  display: none; /* По умолчанию скрыто */
+}
+
+.edit-name img {
+  width: 24px;
+  height: 28px;
+}
+
+.user-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 22px;
+  width: 128px;
+  margin-right: 24px;
+  justify-content: space-between;
+}
+
+.user-logo-btn {
+  display: none; /* По умолчанию скрыто */
+  padding: 4px 2px;
+  justify-content: center;
+  background-color: #428bf9;
+  min-height: 32px;
+  line-height: 16px;
+  font-size: 13px;
+  width: 115px;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.user-logo {
+  width: 128px;
+}
+
+.user-logo img {
+  width: 128px;
+  height: 128px;
+  padding: 2px;
+  background-color: #fff;
+  border-radius: 100%;
+  border: 3px solid #aff218;
+}
+
+.user-description {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.user-description-text {
+  width: 100%;
+  font-size: 15px;
+  letter-spacing: 0px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.edit-description {
+  width: 16px;
+  height: 16px;
+  display: none; /* По умолчанию скрыто */
+}
+
+.subscription {
+  width: 100px;
+  padding: 4px 8px;
+  color: #126df7;
+  font-size: 13px;
+  line-height: 16px;
+  min-height: 32px;
+  border-radius: 12px;
+  border: 1px solid #0010241f;
+  margin-left: 24px;
+  display: none; /* По умолчанию скрыто */
+}
+
+.form-post {
+  display: none; /* По умолчанию скрыто */
+}
+
+.post-input {
+  background-color: #00102408;
+  min-width: 824px;
+  min-height: 136px;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 20px 17px;
+  color: #9299a2;
+  border-radius: 12px;
+  resize: none;
+}
+
+.post-send {
+  margin-left: auto;
+  min-height: 32px;
+  width: 100px;
+  border-radius: 8px;
+  background-color: #ffdd2d;
+  padding: 4px 8px;
+  font-size: 13px;
+  color: #333333;
+  line-height: 16px;
+}
+
+.post-content {
+  display: flex;
+  column-gap: 10px;
+}
+
+.delete-post {
+  display: flex;
+  align-items: center;
+}
+
+.delete-post img {
+  width: 10.6px;
+}
+
+textarea:focus {
+  outline: none;
+  color: #000;
+}
+
+.post.active {
+  display: flex;
+}
+
+.user-logo-btn.active {
+  display: flex;
+}
+
+.edit-name.active {
+  display: block;
+}
+
+.edit-description.active {
+  display: block;
+}
+
+.subscription.active {
+  display: flex;
+}
+
+.form-post.active {
+  display: flex;
+  flex-direction: column;
+  row-gap: 21px;
+  margin-top: 74px;
+}

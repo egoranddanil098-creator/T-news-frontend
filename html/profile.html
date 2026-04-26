@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-News</title>
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <div class="logo-icon">
+            <a href="main.html"><img src="../img/icon.svg" alt="" /></a>
+          </div>
+          <input
+            type="text"
+            placeholder="Поиск по T-News"
+            class="search-input"
+          />
+        </div>
+
+        <div class="links">
+          <div class="register">
+            <a href="register.html" class="register-link">
+              <p>Зарегистрироваться</p>
+              <img src="../img/arrow-in-right.svg" alt="register icon" />
+            </a>
+          </div>
+          <div class="login">
+            <a href="login.html" class="register-link">
+              <p>Войти</p>
+              <img src="../img/arrow-in-right.svg" alt="register icon" />
+            </a>
+          </div>
+        </div>
+
+        <div class="user-menu">
+          <div class="logout">
+            <button class="logout-button">
+              <p>Выйти</p>
+              <img src="../img/arrow-in-right.svg" alt="logout icon" />
+            </button>
+          </div>
+          <div class="profile">
+            <a href="profile.html" class="profile-link">
+              <img src="../img/profile.svg" alt="profile icon" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="user-profile">
+        <div class="user-img">
+          <div class="user-logo">
+            <img id="profileImage" src="" alt="" />
+          </div>
+          <div class="user-logo-btn">
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/*"
+              style="display: none"
+            />
+            <button class="change-img">Изменить фото</button>
+          </div>
+        </div>
+
+        <div class="user-info">
+          <div class="user-block">
+            <div class="name"></div>
+            <button class="edit-name">
+              <img src="../img/edit.svg" alt="" />
+            </button>
+          </div>
+
+          <div class="user-description">
+            <p class="user-description-text"></p>
+            <button class="edit-description">
+              <img src="../img/edit_small.svg" alt="" />
+            </button>
+          </div>
+        </div>
+
+        <div class="">
+          <button class="subscription">Подписаться</button>
+        </div>
+      </div>
+
+      <div class="form-post">
+        <textarea
+          class="post-input"
+          name=""
+          id=""
+          placeholder="Введите свой пост"
+        ></textarea>
+        <button class="post-send">Отправить</button>
+      </div>
+
+      <div class="list-posts"></div>
+    </main>
+
+    <script type="module" src="../js/pages/profile.js"></script>
+  </body>
+</html>

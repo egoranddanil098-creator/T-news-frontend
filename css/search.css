@@ -1,0 +1,168 @@
+/* @import url("reset.css");
+@import url("header.css");
+@import url("posts.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fc;
+}
+
+.content {
+  max-width: 824px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-buttons {
+  display: flex;
+  align-self: flex-start;
+  column-gap: 4px;
+  margin-top: 44px;
+}
+
+.search-btn {
+  border-radius: 8px;
+  border: 1px solid #0010241F;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 10px 16px;
+}
+
+.search-btn.active {
+  border: 2px solid #FFDD2D; 
+}
+
+.result-search {
+  margin-top: 44px;
+  max-width: 824px;
+}
+
+.searched-users {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.searched-user {
+  max-width: 824px;
+  display: flex;
+  align-items: flex-start;
+} */
+
+@import url("reset.css");
+@import url("header.css");
+@import url("posts.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  max-width: 824px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-buttons {
+  display: flex;
+  align-self: flex-start;
+  column-gap: 4px;
+  margin-top: 44px;
+  width: 100%;
+}
+
+.search-btn {
+  border-radius: 8px;
+  border: 1px solid #0010241f;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 10px 16px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.search-btn.active {
+  border: 2px solid #ffdd2d;
+}
+
+/* Контейнер для результатов поиска */
+.result-search {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Левая колонка - список пользователей */
+.searched-users {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 44px !important;
+}
+
+/* Карточка пользователя */
+.searched-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Контейнер для постов (в правой колонке) */
+.searched-posts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card {
+  margin-top: 44px !important;
+}
+
+/* Стили для постов в результатах поиска */
+.searched-post {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+/* Сообщение о пустых результатах */
+.no-results {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+  width: 100%;
+}
+
+.no-results p {
+  margin-bottom: 10px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .content {
+    padding: 0 16px;
+    max-width: 100%;
+  }
+
+  .searched-users {
+    flex: none;
+    width: 100%;
+  }
+
+  .searched-user {
+    width: 100%;
+  }
+}
